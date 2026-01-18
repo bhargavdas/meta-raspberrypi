@@ -97,6 +97,16 @@ And the same for the `distro`.
 
 For further information, you can read more at <https://kas.readthedocs.io/en/latest/index.html>
 
+## Quick Start with bitbake-setup
+1. Initialize the setup, `bitbake/bin/bitbake-setup init meta-raspberrypi/configurations/poky-rpi-master.conf`
+2. Select the required configurations.
+3. bitbake core-image-base
+4. Use bmaptool to copy the generated wic image to SD card
+5. Boot your RPI
+
+To select configurations non-interactively following can be executed.
+`bitbake/bin/bitbake-setup init --non-interactive meta-raspberrypi/configurations/poky-rpi-master.conf.json poky distro/poky machine/raspberrypi5.conf`
+
 ## Contributing
 
 You can send patches using the GitHub pull request process or/and through the
